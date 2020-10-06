@@ -10,7 +10,7 @@
   --ligth-bg: #f5f4fa;
   --icons-light-theme: #afb1b8;
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-duration: 2500ms;
+  --transition-duration: 250ms;
 }
 
 body {
