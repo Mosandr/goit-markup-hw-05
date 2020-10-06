@@ -9,6 +9,8 @@
   --card-bg: #ffffff;
   --ligth-bg: #f5f4fa;
   --icons-light-theme: #afb1b8;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 2500ms;
 }
 
 body {
@@ -121,6 +123,9 @@ main {
 .header-mail-link:focus,
 .header-tel-link:hover,
 .header-tel-link:focus {
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   color: var(--accent-color);
 }
 .address {
@@ -157,6 +162,9 @@ main {
 .header-mail-link:focus > svg,
 .header-tel-link:hover > svg,
 .header-tel-link:focus > svg {
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--cubic-bezier);
   fill: #2196f3;
 }
 
@@ -371,6 +379,9 @@ main {
 
 .team-social-link:hover,
 .team-social-link:focus {
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   background-color: var(--accent-color);
 }
 
@@ -381,6 +392,9 @@ main {
 
 .team-social-link:hover > svg,
 .team-social-link:focus > svg {
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   fill: var(--title-dark-theme-color);
 }
 
@@ -417,6 +431,9 @@ main {
 
 .clients-logo-link:hover,
 .clients-logo-link:focus {
+  transition-property: border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   border-color: var(--accent-color);
 }
 
@@ -425,8 +442,11 @@ main {
   fill: var(--icons-light-theme);
 }
 
-.clients-logo-link:hover,
+.clients-logo-link:hover > svg,
 .clients-logo-link:focus > svg {
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   fill: var(--accent-color);
 }
 /* =============== END CLIENTS ===================== */
@@ -495,6 +515,9 @@ main {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   background-color: var(--accent-color);
 }
 
@@ -541,6 +564,9 @@ main {
 
 .filter-btn:hover,
 .filter-btn:focus {
+  transition-property: color, background;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   color: var(--title-dark-theme-color);
   background: var(--accent-color);
 }
@@ -557,10 +583,18 @@ main {
   width: 370px;
   padding-bottom: 20px;
   border: 1px solid #eeeeee;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
+  box-shadow: none;
 }
 
 .projects-list-item:hover,
 .projects-list-item:focus {
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -595,18 +629,18 @@ main {
   line-height: 1.556;
   letter-spacing: 0.03em;
 
-  transform: translateY(100%);
-  transition: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(101%);
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
-.project-overlay:hover .project-description,
-.project-overlay:focus .project-description {
+.projects-list-item:hover .project-description,
+.projects-list-item:focus .project-description {
   transform: translateY(0);
   transition: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .project-title {
