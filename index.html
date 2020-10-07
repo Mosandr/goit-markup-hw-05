@@ -59,16 +59,6 @@
         </address>
       </div>
     </header>
-    <!-- Modal window -->
-    <div data-modal class="backdrop is-hidden">
-      <form class="modal-form" action="">
-        <button data-modal-close class="close-btn" type="button">
-          <svg width="11" height="11">
-            <use href="./images/sprite.svg#close-button"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
     <main>
       <!--Hero-->
       <section class="hero">
@@ -438,6 +428,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-address">
@@ -504,6 +495,17 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <!-- Modal window -->
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal-form">
+        <button data-modal-close class="close-btn" type="button">
+          <svg width="11" height="11">
+            <use href="./images/sprite.svg#close-button"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
