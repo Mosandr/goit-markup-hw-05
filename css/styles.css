@@ -63,6 +63,53 @@ body {
 
 /* =============== END COMPONENTS ===================== */
 
+/* =============== MODAL WINDOW ===================== */
+.backdrop {
+  display: flex;
+  justify-content: center;
+  width: 1600px;
+  height: 1024px;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-form {
+  position: relative;
+  align-self: center;
+  padding: 40px;
+  width: 528px;
+  height: 581px;
+  background: var(--card-bg);
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover > svg {
+  fill: #2196f3;
+}
+
+/* =============== END MODAL WINDOW ===================== */
+
 /* =============== HEADER ===================== */
 /* .header {
   position: fixed;

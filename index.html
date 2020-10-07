@@ -59,12 +59,24 @@
         </address>
       </div>
     </header>
+    <!-- Modal window -->
+    <div data-modal class="backdrop is-hidden">
+      <form class="modal-form" action="">
+        <button data-modal-close class="close-btn" type="button">
+          <svg width="11" height="11">
+            <use href="./images/sprite.svg#close-button"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
     <main>
       <!--Hero-->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="modal-btn" type="button">Заказать услугу</button>
+          <button data-modal-open class="modal-btn" type="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!--Features-->
@@ -492,5 +504,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
